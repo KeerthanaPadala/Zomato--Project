@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Dine-In Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff3e0;
+        }
+        header {
+            background-color: #ff5722;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            background-color: #ff7043;
+            overflow: hidden;
+            color: white;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+            list-style: none;
+        }
+        nav ul li {
+            display: inline;
+            padding: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            background-color: #ff7043;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            animation: bounce 2s infinite;
+            text-decoration: none; /* Remove underline */
+        }
+        .button:hover {
+            background-color: #ff8a65;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        .restaurant-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .restaurant-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(33.333% - 40px);
+            box-sizing: border-box;
+            animation: fadeIn 1.5s;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        footer {
+            background-color: #ff5722;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Zomato Dine-In Recommendations</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#recommendations">Recommendations</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Discover the Best Dining Experiences</h2>
+            <p>Explore our curated list of top restaurant recommendations, perfect for every occasion. Whether you're in the mood for a fancy dinner or a casual lunch, we have the best options for you.</p>
+            <a href="/recommend" class="button">Get Recommendation</a>
+        </section>
+        <section id="recommendations">
+            <h2>Top Recommendations</h2>
+            <div class="restaurant-list">
+                <div class="restaurant-item">
+                    <h3>Restaurant Name 1</h3>
+                    <p>Cuisine: Italian</p>
+                    <p>Rating: 4.5/5</p>
+                    <p>Location: New York</p>
+                </div>
+                <div class="restaurant-item">
+                    <h3>Restaurant Name 2</h3>
+                    <p>Cuisine: Chinese</p>
+                    <p>Rating: 4.7/5</p>
+                    <p>Location: San Francisco</p>
+                </div>
+                <div class="restaurant-item">
+                    <h3>Restaurant Name 3</h3>
+                    <p>Cuisine: Indian</p>
+                    <p>Rating: 4.8/5</p>
+                    <p>Location: Chicago</p>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We provide curated dine-in restaurant recommendations to help you enjoy the best dining experiences. Our team of food enthusiasts ensures that you have the best dining options at your fingertips.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Zomato Dine-In Recommendations. All rights reserved.</p>
+    </footer>
+</body>
+</html>
